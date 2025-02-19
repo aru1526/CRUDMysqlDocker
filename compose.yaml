@@ -1,0 +1,12 @@
+services:
+  mariadb:
+    image: mariadb:10.7
+    container_name: mydb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cruddb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: secret
+    tty: true
+    ports:
+      - "3307:3306"
